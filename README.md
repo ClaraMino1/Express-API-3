@@ -2,6 +2,10 @@
 
 Resumen
 -------
+- **Repositorio de Código (GitHub):** [https://github.com/ClaraMino1/Express-API-3](https://github.com/ClaraMino1/Express-API-3)
+
+- **APLICACIÓN DESPLEGADA:** [https://express-api-production-ed9a.up.railway.app/api/health](https://express-api-production-ed9a.up.railway.app/api/health)
+
 
 Proyecto Backend para una API de e-commerce construida con Express y MongoDB. Provee endpoints para productos, autenticación (JWT) y métricas. Incluye seeds de ejemplo, modos de ejecución (desarrollo, producción y cluster) y tests.
 
@@ -115,6 +119,11 @@ npm run test:coverage
 Docker
 ------
 
+El proyecto está contenedorizado y la imagen optimizada para producción se encuentra disponible públicamente en Docker Hub.
+
+- **URL Pública de la imagen:** [https://hub.docker.com/repository/docker/claraamino/api-express/general](https://hub.docker.com/repository/docker/claraamino/api-express/general)
+
+
 Incluye `Dockerfile` para construir una imagen de producción ligera. Para crear y ejecutar:
 
 ```bash
@@ -129,3 +138,25 @@ El proyecto usa Pino para logging y `prom-client` para exponer métricas. Endpoi
 
 
 
+Evidencia de Tests
+--------------------
+
+### 1. Ejecución de Tests y Coverage
+A continuación se muestra el resultado de la ejecución exitosa de los tests
+
+![Logs de los Tests](./tests-images/1.png)
+![Logs de los Tests](./tests-images/2.png)
+![Logs de los Tests](./tests-images/3.png)
+![Logs de los Tests](./tests-images/4.png)
+![Logs de los Tests](./tests-images/5.png)
+![Logs de los Tests](./tests-images/6.png)
+
+### 2. Contenedor Docker en Ejecución
+Evidencia de la aplicación corriendo correctamente dentro del contenedor Docker y respondiendo al endpoint de `health`:
+
+![Contenedor Docker](./tests-images/local.png)
+
+### 3. Escaneo de Seguridad (Docker Scout)
+Resultado del análisis básico de vulnerabilidades realizado sobre la imagen subida:
+
+![Escaneo de Seguridad](./tests-images/docker-scout-scan.png)
